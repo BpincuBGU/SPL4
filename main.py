@@ -19,7 +19,7 @@ def report_order(repo, report_file, order):
             file.write("\n")
         hat = repo.hats.get_hat_by_id(order.hat)
         supplier = repo.suppliers.get_supplier_by_id(hat.supplier)
-        file.write(f"{hat.topping},{supplier.name},{supplier.name}")
+        file.write(f"{hat.topping},{supplier.name},{order.location}")
 
 def handle_orders(repo, orders_file, report_file):
     order_id = 1
